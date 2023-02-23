@@ -3,6 +3,7 @@ package;
 import flixel.FlxState;
 import heroes.Hero;
 import heroes.ScreensaverHero;
+import heroes.ControllableHero;
 
 class PlayState extends FlxState
 {
@@ -23,6 +24,8 @@ class PlayState extends FlxState
 		add(ScreensaverHero3);
 		var ScreensaverHero4 = new ScreensaverHero(80, 80);
 		add(ScreensaverHero4);
+		var ControllableHero = new ControllableHero(250, 250);
+		add(ControllableHero);
 	}
 
 	override public function update(elapsed:Float)
