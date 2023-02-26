@@ -4,6 +4,7 @@ import flixel.FlxState;
 import heroes.Hero;
 import heroes.ScreensaverHero;
 import heroes.ControllableHero;
+import flixel.FlxG;
 
 class PlayState extends FlxState
 {
@@ -14,16 +15,9 @@ class PlayState extends FlxState
 		text.screenCenter();
 		add(text);
 
-		var myHero = new Hero(200, 400);
-		add(myHero);
-		var ScreensaverHero1 = new ScreensaverHero(100, 200);
-		add(ScreensaverHero1);
-		var ScreensaverHero2 = new ScreensaverHero(200, 100);
-		add(ScreensaverHero2);
-		var ScreensaverHero3 = new ScreensaverHero(50, 20);
-		add(ScreensaverHero3);
-		var ScreensaverHero4 = new ScreensaverHero(80, 80);
-		add(ScreensaverHero4);
+		for (i in 0...10) {
+			add(new ScreensaverHero(FlxG.random.float(50,500), FlxG.random.float(50,500)));
+		}
 		var ControllableHero = new ControllableHero(250, 250);
 		add(ControllableHero);
 	}
