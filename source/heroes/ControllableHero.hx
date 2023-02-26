@@ -49,7 +49,6 @@ class ControllableHero extends FlxSprite {
                 this.velocity.y += 10;
             }
         }
-        trace(this.velocity.y);
 
         if(FlxG.keys.pressed.LEFT)
         {
